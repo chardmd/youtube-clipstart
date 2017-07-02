@@ -40,7 +40,12 @@ class HomePage extends Component {
 
     restart(e) {
         e.preventDefault();
-        this.setState({ stepIndex: 0 });
+        this.setState({
+            stepIndex: 0,
+            url: '',
+            minutes: 0,
+            seconds: 0,
+        });
     }
 
     getStepContent(stepIndex) {
