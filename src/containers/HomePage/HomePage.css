@@ -1,5 +1,11 @@
 .HomePage {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    background-color: #366ed1;
+    margin-top: 50px;
+}
+
+.HomePage .container {
+    padding: 10px 50px 50px 50px;
+    max-width: 960px;
+    margin: 0 auto;
+    color: #ffffff;
 }

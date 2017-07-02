@@ -51,7 +51,8 @@ class HomePage extends Component {
     getStepContent(stepIndex) {
         switch (stepIndex) {
             case 0:
-                return <TextField hintText="Your original URL here" id="text-url" value={this.state.url} onChange={(e) => this.setState({ url: e.target.value })} />
+                return <TextField hintText="Your original URL here" id="text-url"
+                    value={this.state.url} onChange={(e) => this.setState({ url: e.target.value })} />
             case 1:
                 return (<TimeSelector changeMinutes={(e) => this.setState({ minutes: parseInt(e.target.value, 10) })}
                     changeSeconds={(e) => this.setState({ seconds: parseInt(e.target.value, 10) })}
@@ -72,7 +73,7 @@ class HomePage extends Component {
         return (
             <div className="HomePage">
                 <Header />
-                <div style={{ width: '100%', maxWidth: 700, margin: 'auto' }}>
+                <div className="container">
                     <Navigation stepIndex={stepIndex} />
                     <div style={contentStyle}>
                         <div>

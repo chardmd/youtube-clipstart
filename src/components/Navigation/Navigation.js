@@ -5,19 +5,25 @@ import {
     Stepper,
     StepLabel,
 } from 'material-ui/Stepper';
+import './Navigation.css';
 
 class Navigation extends Component {
+
     render() {
+        const style = {
+            color: '#ffffff'
+        }
+
         return (
             <Stepper activeStep={this.props.stepIndex}>
                 <Step>
-                    <StepLabel>Set Original Youtube URL</StepLabel>
+                    <StepLabel style={style}>Set Original Youtube URL</StepLabel>
                 </Step>
                 <Step>
-                    <StepLabel>Select the Start Time</StepLabel>
+                    <StepLabel style={style}>Select the Start Time</StepLabel>
                 </Step>
                 <Step>
-                    <StepLabel>Copy and Share</StepLabel>
+                    <StepLabel style={style}>Copy and Share</StepLabel>
                 </Step>
             </Stepper>
         );

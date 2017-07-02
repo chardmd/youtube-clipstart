@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
-import FlatButton from 'material-ui/FlatButton';
 
 class ControlButton extends Component {
     render() {
         return (
             <div style={{ marginTop: 12 }}>
-                <FlatButton
+                <RaisedButton
                     label="Back"
                     disabled={this.props.stepIndex === 0}
+                    primary={true}
                     onTouchTap={this.props.handlePrev}
                     style={{ marginRight: 12 }}
                 />
