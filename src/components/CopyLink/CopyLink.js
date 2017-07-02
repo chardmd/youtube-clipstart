@@ -8,7 +8,7 @@ class CopyLink extends Component {
     render() {
         return (
             <div className="CopyLink">
-                <TextField disabled={true} value={this.props.value} />
+                <TextField disabled={true} value={this.props.value} id="text-link"/>
                 <RaisedButton label="Copy" secondary={true} className="copyButton" />
             </div>
         );

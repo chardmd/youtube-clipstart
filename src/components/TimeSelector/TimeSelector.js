@@ -9,14 +9,18 @@ class TimeSelector extends Component {
 
         return (
             <div className="TimeSelector">
-                <TextField hintText="1" floatingLabelText="Enter Minutes" onChange={this.props.changeMinutes} className="textField" />
-                <TextField hintText="20" floatingLabelText="Enter Seconds" onChange={this.props.changeSeconds} className="textField" />
+                <TextField hintText="1" floatingLabelText="Enter Minutes" className="textField" id="text-minutes"
+                    onChange={this.props.changeMinutes} value={this.props.minutes === 0 ? '' : this.props.minutes} />
+                <TextField hintText="20" floatingLabelText="Enter Seconds" className="textField" id="text-seconds"
+                    onChange={this.props.changeSeconds} value={this.props.seconds === 0 ? '' : this.props.seconds} />
             </div>
         );
     }
 }
 
 TimeSelector.propTypes = {
+    minutes: PropTypes.number.isRequired,
+    seconds: PropTypes.number.isRequired,
     changeMinutes: PropTypes.func.isRequired,
     changeSeconds: PropTypes.func.isRequired,
 };

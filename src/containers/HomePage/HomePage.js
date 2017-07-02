@@ -45,9 +45,12 @@ class HomePage extends Component {
     getStepContent(stepIndex) {
         switch (stepIndex) {
             case 0:
-                return <TextField hintText="Your original URL here" value={this.state.url} onChange={(e) => this.setState({ url: e.target.value })} />
+                return <TextField hintText="Your original URL here" id="text-url" value={this.state.url} onChange={(e) => this.setState({ url: e.target.value })} />
             case 1:
-                return (<TimeSelector changeMinutes={(e) => this.setState({ minutes: e.target.value })} changeSeconds={(e) => this.setState({ seconds: e.target.value })} />)
+                return (<TimeSelector changeMinutes={(e) => this.setState({ minutes: parseInt(e.target.value, 10) })}
+                    changeSeconds={(e) => this.setState({ seconds: parseInt(e.target.value, 10) })}
+                    minutes={this.state.minutes}
+                    seconds={this.state.seconds} />)
             case 2:
                 return (<CopyLink value={`${this.state.url}&t=${this.state.minutes}m${this.state.seconds}s`} />)
             default:
