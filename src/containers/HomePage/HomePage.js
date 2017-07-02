@@ -8,6 +8,7 @@ import ControlButton from '../../components/ControlButton';
 import TimeSelector from '../../components/TimeSelector';
 import CopyLink from '../../components/CopyLink';
 import RestartStep from '../../components/RestartStep';
+import OtherInfo from '../../components/OtherInfo';
 
 class HomePage extends Component {
 
@@ -74,15 +75,18 @@ class HomePage extends Component {
             <div className="HomePage">
                 <Header />
                 <div className="container">
-                    <h1>Clip your Youtube links</h1>
-                    <Navigation stepIndex={stepIndex} />
-                    <div style={contentStyle}>
-                        <div>
-                            {this.getStepContent(stepIndex)}
-                            <ControlButton stepIndex={stepIndex} handleNext={this.handleNext} handlePrev={this.handlePrev} />
+                    <div>
+                        <h1>Clip your Youtube links</h1>
+                        <Navigation stepIndex={stepIndex} />
+                        <div style={contentStyle}>
+                            <div>
+                                {this.getStepContent(stepIndex)}
+                                <ControlButton stepIndex={stepIndex} handleNext={this.handleNext} handlePrev={this.handlePrev} />
+                            </div>
                         </div>
                     </div>
                 </div>
+                <OtherInfo />
             </div>
         );
     }

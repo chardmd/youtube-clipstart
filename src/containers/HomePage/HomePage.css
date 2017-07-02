@@ -1,13 +1,16 @@
 .HomePage {
-    background-color: #366ed1;
     margin-top: 50px;
 }
 
 .HomePage .container {
     padding: 10px 50px 50px 50px;
+    color: #ffffff;
+    background-color: #366ed1;
+}
+
+.HomePage .container > div {
     max-width: 960px;
     margin: 0 auto;
-    color: #ffffff;
 }
 
 .HomePage .container > h1 {
