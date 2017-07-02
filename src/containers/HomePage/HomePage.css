@@ -9,3 +9,9 @@
     margin: 0 auto;
     color: #ffffff;
 }
+
+.HomePage .container > h1 {
+    font-size: 30px;
+    font-weight: lighter;
+    cursor: default;
+}

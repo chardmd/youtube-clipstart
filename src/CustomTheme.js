@@ -18,7 +18,7 @@ export default {
         accent1Color: tealA700,
         accent2Color: grey100,
         accent3Color: grey500,
-        textColor: darkBlack,
+        textColor: white,
         secondaryTextColor: fade(darkBlack, 0.54),
         alternateTextColor: white,
         canvasColor: white,
@@ -34,5 +34,6 @@ export default {
     raisedButton: {
         disabledColor: darken(white, 0.1),
         primaryTextColor: lightBlue600,
+        disabledTextColor: fade(darkBlack, 0.54),
     },
 };
