@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
+import './HomePage.css';
 
 import Header from '../../components/Header';
 import Navigation from '../../components/Navigation';
@@ -64,7 +65,7 @@ class HomePage extends Component {
         const contentStyle = { margin: '0 16px' };
 
         return (
-            <div>
+            <div className="HomePage">
                 <Header />
                 <div style={{ width: '100%', maxWidth: 700, margin: 'auto' }}>
                     <Navigation stepIndex={stepIndex} />
