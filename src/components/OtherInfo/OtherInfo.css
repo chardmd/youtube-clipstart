@@ -1,7 +1,40 @@
-.OtherInfo .paper {
-    height: 200px;
-    width: 200px;
-    margin: 100px 50px 0 50px;
-    text-align: center;
-    display: inline-block;
+.OtherInfo {
+    max-width: 960px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.OtherInfo .card {
+    width: 250px;
+    font-size: 16px;
+    color: #757575;
+    text-align: left;
+    flex-grow: 1;
+    padding-left: 32px;
+    margin-top: 50px;
+}
+
+.OtherInfo .card div {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    vertical-align: middle;
+    line-height: 70px;
+}
+
+.OtherInfo .card p {
+    line-height: 20px;
+    margin-top: 2px;
+}
+
+.OtherInfo .avatar {
+    margin-right: 10px;
+}
+
+.OtherInfo h1 {
+    margin: 0;
+    font-size: 35px;
+    font-weight: normal;
 }

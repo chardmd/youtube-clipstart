@@ -76,7 +76,7 @@ class HomePage extends Component {
                 <Header />
                 <div className="container">
                     <div>
-                        <h1>Clip your Youtube links</h1>
+                        <h1>Set your Youtube start time</h1>
                         <Navigation stepIndex={stepIndex} />
                         <div style={contentStyle}>
                             <div>
