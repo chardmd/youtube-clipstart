@@ -73,7 +73,6 @@ class HomePage extends Component {
 
         return (
             <div className="HomePage">
-                <Header />
                 <div className="container">
                     <div>
                         <h1>Set your Youtube start time</h1>

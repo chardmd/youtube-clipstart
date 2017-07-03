@@ -1,9 +1,5 @@
-.HomePage {
-    margin-top: 50px;
-}
-
 .HomePage .container {
-    padding: 10px 50px 50px 50px;
+    padding: 80px;
     color: #ffffff;
     background-color: #366ed1;
 }
