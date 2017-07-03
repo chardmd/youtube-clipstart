@@ -1,3 +1,7 @@
 ## Youtube Clip Start
 
-### Set the start time of youtube video links.
+Set your Youtube start time.
+
+![under-development](https://img.shields.io/badge/status-under--development-blue.svg)
+
+![Alt text](https://github.com/chardmd/youtube-clipstart/blob/master/preview.png?raw=true "Preview")
