@@ -52,7 +52,7 @@ class HomePage extends Component {
     getStepContent(stepIndex) {
         switch (stepIndex) {
             case 0:
-                return <OriginalLink onChange={(e) => this.setState({ url: e.target.value })} value={this.state.url} />
+                return <OriginalLink onChange={(e) => this.setState({ url: e.target.value })} url={this.state.url} />
             case 1:
                 return (<TimeSelector changeMinutes={(e) => this.setState({ minutes: parseInt(e.target.value, 10) })}
                     changeSeconds={(e) => this.setState({ seconds: parseInt(e.target.value, 10) })}
