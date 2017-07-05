@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import TextField from 'material-ui/TextField';
 import './HomePage.css';
 
 import Header from '../../components/Header';
+import OriginalLink from '../../components/OriginalLink';
 import Navigation from '../../components/Navigation';
 import ControlButton from '../../components/ControlButton';
 import TimeSelector from '../../components/TimeSelector';
@@ -52,8 +52,7 @@ class HomePage extends Component {
     getStepContent(stepIndex) {
         switch (stepIndex) {
             case 0:
-                return <TextField hintText="Your original URL here" id="text-url"
-                    value={this.state.url} onChange={(e) => this.setState({ url: e.target.value })} />
+                return <OriginalLink onChange={(e) => this.setState({ url: e.target.value })} value={this.state.url} />
             case 1:
                 return (<TimeSelector changeMinutes={(e) => this.setState({ minutes: parseInt(e.target.value, 10) })}
                     changeSeconds={(e) => this.setState({ seconds: parseInt(e.target.value, 10) })}
