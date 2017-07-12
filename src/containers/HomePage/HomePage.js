@@ -19,12 +19,14 @@ class HomePage extends Component {
             url: '',
             minutes: 0,
             seconds: 0,
+            isValid: false
         };
 
         this.handleNext = this.handleNext.bind(this);
         this.handlePrev = this.handlePrev.bind(this);
         this.restart = this.restart.bind(this);
         this.getStepContent = this.getStepContent.bind(this);
+        this.isValid = this.isValid.bind(this);
     }
 
     handleNext() {
@@ -49,10 +51,16 @@ class HomePage extends Component {
         });
     }
 
+    isValid(status) {
+        this.setState({
+            isValid: status
+        })
+    }
+
     getStepContent(stepIndex) {
         switch (stepIndex) {
             case 0:
-                return <OriginalLink onChange={(e) => this.setState({ url: e.target.value })} url={this.state.url} />
+                return <OriginalLink onChange={(e) => this.setState({ url: e.target.value })} url={this.state.url} isValid={this.isValid} />
             case 1:
                 return (<TimeSelector changeMinutes={(e) => this.setState({ minutes: parseInt(e.target.value, 10) })}
                     changeSeconds={(e) => this.setState({ seconds: parseInt(e.target.value, 10) })}
@@ -79,7 +87,7 @@ class HomePage extends Component {
                         <div style={contentStyle}>
                             <div>
                                 {this.getStepContent(stepIndex)}
-                                <ControlButton stepIndex={stepIndex} handleNext={this.handleNext} handlePrev={this.handlePrev} />
+                                <ControlButton stepIndex={stepIndex} handleNext={this.handleNext} handlePrev={this.handlePrev} isValid={this.state.isValid} />
                             </div>
                         </div>
                     </div>

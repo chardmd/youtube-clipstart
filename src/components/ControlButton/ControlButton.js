@@ -16,6 +16,7 @@ class ControlButton extends Component {
                 <RaisedButton
                     label={this.props.stepIndex === 2 ? 'Finish' : 'Next'}
                     primary={true}
+                    disabled={this.props.isValid === false}
                     onTouchTap={this.props.handleNext}
                 />
             </div>
@@ -26,7 +27,8 @@ class ControlButton extends Component {
 ControlButton.propTypes = {
     stepIndex: PropTypes.number.isRequired,
     handleNext: PropTypes.func.isRequired,
-    handlePrev: PropTypes.func.isRequired
+    handlePrev: PropTypes.func.isRequired,
+    isValid: PropTypes.bool.isRequired
 };
 
 export { ControlButton };

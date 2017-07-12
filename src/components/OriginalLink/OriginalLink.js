@@ -23,8 +23,10 @@ class OriginalLink extends Component {
     handleValidation(url) {
         if (this.isYoutubeURLValid(url)) {
             this.setState({ errorMessage: "" });
+            this.props.isValid(true);
         } else {
-            this.setState({ errorMessage: "Invalid Youtube URL" });
+            if (url !== "") this.setState({ errorMessage: "Invalid Youtube URL" });
+            this.props.isValid(false);
         }
     }
 
@@ -47,6 +49,7 @@ class OriginalLink extends Component {
 OriginalLink.propTypes = {
     onChange: PropTypes.func.isRequired,
     url: PropTypes.string.isRequired,
+    isValid: PropTypes.bool.isRequired
 };
 
 export { OriginalLink };
