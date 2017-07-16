@@ -5,6 +5,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 class ControlButton extends Component {
     render() {
         return (
+            this.props.stepIndex <= 2 &&
             <div style={{ marginTop: 12 }}>
                 <RaisedButton
                     label="Back"

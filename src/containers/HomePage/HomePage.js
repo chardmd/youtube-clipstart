@@ -48,6 +48,7 @@ class HomePage extends Component {
             url: '',
             minutes: 0,
             seconds: 0,
+            isValid: false
         });
     }
 
@@ -91,7 +92,10 @@ class HomePage extends Component {
                         <div style={contentStyle}>
                             <div>
                                 {this.getStepContent(stepIndex)}
-                                <ControlButton stepIndex={stepIndex} handleNext={this.handleNext} handlePrev={this.handlePrev} isValid={this.state.isValid} />
+                                <ControlButton stepIndex={stepIndex}
+                                    handleNext={this.handleNext}
+                                    handlePrev={this.handlePrev}
+                                    isValid={this.state.isValid} />
                             </div>
                         </div>
                     </div>

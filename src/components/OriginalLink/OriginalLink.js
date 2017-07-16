@@ -34,6 +34,7 @@ class OriginalLink extends Component {
     onChangeHandler(e) {
         this.props.onChange(e);
         setTimeout(() => {
+            //now we got the url from the state, set by the parent
             this.handleValidation(this.props.url);
         }, 0);
     }
