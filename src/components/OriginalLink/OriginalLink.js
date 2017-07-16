@@ -9,6 +9,7 @@ class OriginalLink extends Component {
         super(props);
         this.state = { errorMessage: "" };
         this.handleValidation = this.handleValidation.bind(this);
+        this.onChangeHandler = this.onChangeHandler.bind(this);
     }
 
     isYoutubeURLValid(url) {
@@ -30,6 +31,13 @@ class OriginalLink extends Component {
         }
     }
 
+    onChangeHandler(e) {
+        this.props.onChange(e);
+        setTimeout(() => {
+            this.handleValidation(this.props.url);
+        }, 0);
+    }
+
     render() {
 
         const focusInputField = (input) => {
@@ -38,9 +46,11 @@ class OriginalLink extends Component {
 
         return (
             <div className="OriginalLink">
-                <TextField hintText="Your original URL here" id="text-url"
-                    value={this.props.url} onChange={this.props.onChange} className="text" ref={focusInputField}
-                    onBlur={() => this.handleValidation(this.props.url)} errorText={this.state.errorMessage} />
+                <TextField hintText="Your original URL here" id="text-url" className="text"
+                    ref={focusInputField}
+                    value={this.props.url}
+                    onChange={this.onChangeHandler}
+                    errorText={this.state.errorMessage} />
             </div>
         );
     }
@@ -49,7 +59,7 @@ class OriginalLink extends Component {
 OriginalLink.propTypes = {
     onChange: PropTypes.func.isRequired,
     url: PropTypes.string.isRequired,
-    isValid: PropTypes.bool.isRequired
+    isValid: PropTypes.func.isRequired
 };
 
 export { OriginalLink };
