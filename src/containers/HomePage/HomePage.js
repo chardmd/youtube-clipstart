@@ -87,7 +87,7 @@ class HomePage extends Component {
             <div className="HomePage">
                 <div className="container">
                     <div>
-                        <h1>Set your Youtube start time</h1>
+                        <h1>Set the start time of any Youtube links.</h1>
                         <Navigation stepIndex={stepIndex} />
                         <div style={contentStyle}>
                             <div>
