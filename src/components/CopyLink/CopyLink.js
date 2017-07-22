@@ -26,7 +26,7 @@ class CopyLink extends Component {
                 <CopyToClipboard text={this.props.value} onCopy={this.onCopy}>
                     <RaisedButton label="Copy" secondary={true} className="copyButton" />
                 </CopyToClipboard>
-                <span className="copied">{this.state.copied ? 'Copied.' : null}</span>
+                <a href={this.props.value} target="_blank">{this.state.copied && <span className="copied">Copied</span>}</a>
             </div>
         );
     }
