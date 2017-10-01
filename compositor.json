@@ -104,7 +104,7 @@
     {
       "component": "header",
       "heading": "youtube-clipstart",
-      "subhead": ":link: Set the start time of any Youtube links",
+      "subhead": "Set the start time of any Youtube links",
       "children": [
         {
           "component": "ui/TweetButton",
